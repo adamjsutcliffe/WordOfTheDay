@@ -22,18 +22,12 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frW-YT-l7Y">
-                                <rect key="frame" x="10" y="511" width="394" height="283"/>
+                                <rect key="frame" x="10" y="511" width="394" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-Te-grE">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="141.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo4-d6-u6n" customClass="BackgroundHighlightedButton" customModule="WordOfTheDay" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="131.5" width="374" height="141.5"/>
+                                        <rect key="frame" x="10" y="10" width="374" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                         <state key="normal" title="Word Of The Day">
                                             <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,16 +40,15 @@
                                                 <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BNy-em-rrN" kind="presentation" modalTransitionStyle="coverVertical" id="rL4-dZ-SUF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kd2-Te-grE" firstAttribute="height" secondItem="frW-YT-l7Y" secondAttribute="height" multiplier="0.5" id="1al-yC-wvP"/>
                                     <constraint firstItem="Eo4-d6-u6n" firstAttribute="leading" secondItem="frW-YT-l7Y" secondAttribute="leading" constant="10" id="6cX-mo-Bh9"/>
-                                    <constraint firstItem="kd2-Te-grE" firstAttribute="leading" secondItem="frW-YT-l7Y" secondAttribute="leading" id="Bpz-Ry-jY3"/>
-                                    <constraint firstAttribute="trailing" secondItem="kd2-Te-grE" secondAttribute="trailing" id="Wxc-kS-aB0"/>
-                                    <constraint firstItem="kd2-Te-grE" firstAttribute="top" secondItem="frW-YT-l7Y" secondAttribute="top" id="gg7-VE-bfa"/>
-                                    <constraint firstItem="Eo4-d6-u6n" firstAttribute="height" secondItem="frW-YT-l7Y" secondAttribute="height" multiplier="0.5" id="jUr-RA-IiG"/>
+                                    <constraint firstItem="Eo4-d6-u6n" firstAttribute="top" secondItem="frW-YT-l7Y" secondAttribute="top" constant="10" id="nff-AM-zyw"/>
                                     <constraint firstAttribute="trailing" secondItem="Eo4-d6-u6n" secondAttribute="trailing" constant="10" id="pwF-8N-lZA"/>
                                     <constraint firstAttribute="bottom" secondItem="Eo4-d6-u6n" secondAttribute="bottom" constant="10" id="xst-Ba-yHl"/>
                                 </constraints>
@@ -76,12 +69,15 @@
                                     <constraint firstItem="oVf-cp-2vy" firstAttribute="width" secondItem="s6P-wF-gXU" secondAttribute="width" id="zgj-iq-QSg"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="middle.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcD-BJ-bY7">
+                                <rect key="frame" x="0.0" y="587" width="414" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="frW-YT-l7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1oc-Yp-suu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s6P-wF-gXU" secondAttribute="trailing" id="1sY-eF-rl4"/>
-                            <constraint firstItem="frW-YT-l7Y" firstAttribute="bottom" secondItem="s6P-wF-gXU" secondAttribute="top" id="316-du-USL"/>
                             <constraint firstItem="gFl-9b-IKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5o6-TP-O8H"/>
                             <constraint firstItem="gFl-9b-IKr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="733-wy-ijC"/>
                             <constraint firstItem="s6P-wF-gXU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AlA-2d-Jfz"/>
@@ -97,16 +93,102 @@
                     <connections>
                         <outlet property="WordOfTheDayBgView" destination="frW-YT-l7Y" id="YBT-c9-i3H"/>
                         <outlet property="WordOfTheDayButton" destination="Eo4-d6-u6n" id="QeV-Xz-Sue"/>
-                        <outlet property="WordOfTheDayLabel" destination="kd2-Te-grE" id="eXX-aG-UIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Word View Controller-->
+        <scene sceneID="o0i-Ay-Dcd">
+            <objects>
+                <viewController id="BNy-em-rrN" customClass="WordViewController" customModule="WordOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CeH-Hl-3Rl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-DO-Nxs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="858"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-yl-E4T">
+                                        <rect key="frame" x="8" y="52" width="398" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjM-AS-2h0">
+                                        <rect key="frame" x="8" y="81" width="398" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Definition:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vm-ef-Nqt">
+                                        <rect key="frame" x="8" y="134" width="398" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dictionary definition..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeA-MW-pJ5">
+                                        <rect key="frame" x="8" y="168" width="398" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Context:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-xc-hOs">
+                                        <rect key="frame" x="8" y="253" width="398" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word context examples" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlv-lr-XIE">
+                                        <rect key="frame" x="8" y="282" width="398" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8c-Dv-CH1">
+                                <rect key="frame" x="355" y="10" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="J1k-yS-A42" kind="unwind" unwindAction="cancelToMainViewController:" id="aoc-Bn-LLS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i7i-2y-esu" firstAttribute="trailing" secondItem="m8c-Dv-CH1" secondAttribute="trailing" constant="20" id="6Zl-Kh-80i"/>
+                            <constraint firstItem="oW3-DO-Nxs" firstAttribute="leading" secondItem="i7i-2y-esu" secondAttribute="leading" id="Zj9-Ee-8ez"/>
+                            <constraint firstItem="i7i-2y-esu" firstAttribute="trailing" secondItem="oW3-DO-Nxs" secondAttribute="trailing" id="gOG-dr-g0h"/>
+                            <constraint firstItem="oW3-DO-Nxs" firstAttribute="top" secondItem="i7i-2y-esu" secondAttribute="top" id="ljG-hU-ObC"/>
+                            <constraint firstItem="i7i-2y-esu" firstAttribute="bottom" secondItem="oW3-DO-Nxs" secondAttribute="bottom" constant="-50" id="mXL-vy-Sjj"/>
+                            <constraint firstItem="m8c-Dv-CH1" firstAttribute="top" secondItem="i7i-2y-esu" secondAttribute="top" constant="10" id="njG-LV-Y82"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i7i-2y-esu"/>
+                    </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="BeA-MW-pJ5" id="fs5-2g-Hxe"/>
+                        <outlet property="examplesLabel" destination="Zlv-lr-XIE" id="iw1-vl-jcS"/>
+                        <outlet property="wordLabel" destination="wjM-AS-2h0" id="246-ya-bWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMm-Eg-jd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="J1k-yS-A42" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="Top.png" width="1242" height="1387"/>
         <image name="bottom.png" width="1242" height="249"/>
+        <image name="middle.png" width="1242" height="918"/>
     </resources>
 </document>

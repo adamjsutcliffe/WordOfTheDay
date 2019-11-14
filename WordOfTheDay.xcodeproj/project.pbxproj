@@ -19,6 +19,7 @@
 		67382E5A237DA4A300F83C15 /* Top.png in Resources */ = {isa = PBXBuildFile; fileRef = 67382E57237DA4A200F83C15 /* Top.png */; };
 		67382E5B237DA4A300F83C15 /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 67382E58237DA4A300F83C15 /* bottom.png */; };
 		67382E5E237DA8FE00F83C15 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67382E5D237DA8FE00F83C15 /* Extensions.swift */; };
+		67382E60237DB7DE00F83C15 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67382E5F237DB7DE00F83C15 /* WordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		67382E57237DA4A200F83C15 /* Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Top.png; sourceTree = "<group>"; };
 		67382E58237DA4A300F83C15 /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
 		67382E5D237DA8FE00F83C15 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		67382E5F237DB7DE00F83C15 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				67382E25237DA37E00F83C15 /* AppDelegate.swift */,
 				67382E27237DA37E00F83C15 /* SceneDelegate.swift */,
 				67382E29237DA37E00F83C15 /* ViewController.swift */,
+				67382E5F237DB7DE00F83C15 /* WordViewController.swift */,
 				67382E2B237DA37E00F83C15 /* Main.storyboard */,
 				67382E5D237DA8FE00F83C15 /* Extensions.swift */,
 				67382E2E237DA38100F83C15 /* Assets.xcassets */,
@@ -292,6 +295,7 @@
 			files = (
 				67382E2A237DA37E00F83C15 /* ViewController.swift in Sources */,
 				67382E26237DA37E00F83C15 /* AppDelegate.swift in Sources */,
+				67382E60237DB7DE00F83C15 /* WordViewController.swift in Sources */,
 				67382E28237DA37E00F83C15 /* SceneDelegate.swift in Sources */,
 				67382E5E237DA8FE00F83C15 /* Extensions.swift in Sources */,
 			);
