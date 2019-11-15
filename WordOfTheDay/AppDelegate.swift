@@ -9,12 +9,14 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
         return true
     }
 
@@ -32,6 +34,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+               didReceive response: UNNotificationResponse,
+               withCompletionHandler completionHandler:
+                 @escaping () -> Void) {
+               
+           // Get the meeting ID from the original notification.
+           let userInfo = response.notification.request.content.userInfo
+           let meetingID = userInfo["MEETING_ID"] as! String
+           let userID = userInfo["USER_ID"] as! String
+            print("User info: \(userID) - \(meetingID)")
+           // Perform the task associated with the action.
+           switch response.actionIdentifier {
+           case "ACCEPT_ACTION":
+    //          sharedMeetingManager.acceptMeeting(user: userID,
+    //                                        meetingID: meetingID)
+            print("Accepted action")
+              break
+                
+           case "DECLINE_ACTION":
+    //          sharedMeetingManager.declineMeeting(user: userID,
+    //                                         meetingID: meetingID)
+            print("Declined action")
+              break
+                
+           // Handle other actions…
+         
+           default:
+              break
+           }
+            
+           // Always call the completion handler when done.
+           completionHandler()
+        }
 }
 
